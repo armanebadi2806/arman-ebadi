@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekt anfragen | Arman Ebadi</title>
+  <meta
+    name="description"
+    content="Projekt-Anfrage für Webdesign, interne Tools und Automatisierung. Antwort innerhalb von 24 Stunden."
+  />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=3" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=3" />
+  <link rel="apple-touch-icon" href="assets/logo.png?v=3" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <link rel="stylesheet" href="assets/request.css" />
+</head>
+<body class="request-page">
+  <header class="site-header" data-site-header>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Zur Startseite">
+        <span class="brand-logo" aria-hidden="true">
+          <img src="assets/logo.png" alt="" loading="eager" onerror="this.style.display='none'" />
+        </span>
+        <span>Arman Ebadi</span>
+      </a>
+      <nav class="top-nav" aria-label="Hauptnavigation">
+        <a href="index.html#leistungen">Leistungen</a>
+        <a href="index.html#ablauf">Ablauf</a>
+        <a href="anfrage.html" aria-current="page">Anfrage</a>
+      </nav>
+      <a class="btn btn-secondary" href="index.html">Zur Startseite</a>
+    </div>
+  </header>
+
+  <main class="request-main">
+    <div class="request-shell">
+      <section class="request-intro" data-reveal>
+        <p class="kicker">Projekt-Anfrage</p>
+        <h1>In 6 kurzen Fragen zu deiner Projektanfrage.</h1>
+        <p>
+          Jede Frage ist einzeln aufgebaut, damit es klar und schnell bleibt. Keine Pflichtfelder außer E-Mail im
+          richtigen Format und Telefonnummer.
+        </p>
+      </section>
+
+      <section class="request-wrap" data-reveal>
+        <aside class="request-aside">
+          <h2>Was du bekommst</h2>
+          <ul>
+            <li>Klare Rückmeldung innerhalb von 24 Stunden</li>
+            <li>Saubere Ersteinschätzung für Scope und Reihenfolge</li>
+            <li>Keine Standardvorlage, sondern individueller Vorschlag</li>
+          </ul>
+          <p class="request-hint">
+            Du kannst jede Antwort frei lassen. Nur E-Mail und Telefonnummer sind für die Rückmeldung notwendig.
+          </p>
+        </aside>
+
+        <div class="request-card">
+          <div class="request-top">
+            <div class="request-meta">
+              <p>Frage <span data-request-step>1</span> / 6</p>
+              <p>Antwort in 24h</p>
+            </div>
+            <div class="request-progress-track" aria-hidden="true">
+              <div class="request-progress-fill" data-request-progress></div>
+            </div>
+            <div class="request-tabs" aria-label="Fragefortschritt">
+              <div class="request-tab active" data-step-dot>Projekt</div>
+              <div class="request-tab" data-step-dot>Ziel</div>
+              <div class="request-tab" data-step-dot>Features</div>
+              <div class="request-tab" data-step-dot>Budget</div>
+              <div class="request-tab" data-step-dot>Timing</div>
+              <div class="request-tab" data-step-dot>Kontakt</div>
+            </div>
+          </div>
+
+          <form class="request-form" data-request-form data-endpoint="">
+            <input type="hidden" name="projectType" />
+            <input type="hidden" name="primaryGoal" />
+            <input type="hidden" name="budgetRange" />
+            <input type="hidden" name="timeline" />
+            <input type="hidden" name="preferredContact" />
+            <input type="hidden" name="features" />
+
+            <section class="question-step active" data-question-step>
+              <h2 class="question-title">Welche Art von Projekt planst du?</h2>
+              <p class="question-subtitle">Optional, hilft mir aber für die passende Einschätzung.</p>
+              <div class="slot-grid" role="group" aria-label="Projektart Auswahl">
+                <button type="button" class="slot-option" data-slot-group="projectType" data-slot-value="Neue Website">Neue Website</button>
+                <button type="button" class="slot-option" data-slot-group="projectType" data-slot-value="Website Redesign">Website Redesign</button>
+                <button type="button" class="slot-option" data-slot-group="projectType" data-slot-value="Website + internes System">Website + internes System</button>
+                <button type="button" class="slot-option" data-slot-group="projectType" data-slot-value="Internes Tool">Internes Tool</button>
+                <button type="button" class="slot-option" data-slot-group="projectType" data-slot-value="Automatisierung">Automatisierung</button>
+              </div>
+            </section>
+
+            <section class="question-step" data-question-step>
+              <h2 class="question-title">Was soll sich für dich verbessern?</h2>
+              <p class="question-subtitle">Wähle den Fokus, der für dich am wichtigsten ist.</p>
+              <div class="slot-grid" role="group" aria-label="Hauptziel Auswahl">
+                <button type="button" class="slot-option" data-slot-group="primaryGoal" data-slot-value="Mehr Anfragen">Mehr Anfragen</button>
+                <button type="button" class="slot-option" data-slot-group="primaryGoal" data-slot-value="Mehr Termine">Mehr Termine</button>
+                <button type="button" class="slot-option" data-slot-group="primaryGoal" data-slot-value="Bestellungen digitalisieren">Bestellungen digitalisieren</button>
+                <button type="button" class="slot-option" data-slot-group="primaryGoal" data-slot-value="Interne Prozesse verschlanken">Interne Prozesse verschlanken</button>
+                <button type="button" class="slot-option" data-slot-group="primaryGoal" data-slot-value="Markenauftritt stärken">Markenauftritt stärken</button>
+              </div>
+            </section>
+
+            <section class="question-step" data-question-step>
+              <h2 class="question-title">Welche Features wünschst du dir?</h2>
+              <p class="question-subtitle">Freie Auswahl: tippen und hinzufügen. Du bist nicht auf feste Listen begrenzt.</p>
+              <div class="feature-builder">
+                <div class="slot-grid" role="group" aria-label="Feature Vorschläge">
+                  <button type="button" class="slot-option" data-feature-suggestion="Terminbuchung">Terminbuchung</button>
+                  <button type="button" class="slot-option" data-feature-suggestion="Kundenportal">Kundenportal</button>
+                  <button type="button" class="slot-option" data-feature-suggestion="Automatische E-Mails">Automatische E-Mails</button>
+                  <button type="button" class="slot-option" data-feature-suggestion="CRM-Anbindung">CRM-Anbindung</button>
+                </div>
+                <div class="feature-input-row">
+                  <input type="text" data-feature-input placeholder="Eigenes Feature eingeben" maxlength="60" />
+                  <button type="button" class="add-btn" data-feature-add>Hinzufügen</button>
+                </div>
+                <div class="feature-tags" data-feature-tags aria-live="polite"></div>
+                <textarea
+                  class="feature-textarea"
+                  name="featureNotes"
+                  maxlength="1000"
+                  placeholder="Optional: Kurz beschreiben, was am Ende funktionieren soll."
+                ></textarea>
+              </div>
+            </section>
+
+            <section class="question-step" data-question-step>
+              <h2 class="question-title">Welcher Budgetrahmen passt aktuell?</h2>
+              <p class="question-subtitle">Optional. Hilft bei einer realistischen Erstplanung.</p>
+              <div class="slot-grid" role="group" aria-label="Budget Auswahl">
+                <button type="button" class="slot-option" data-slot-group="budgetRange" data-slot-value="unter 1.000 EUR">unter 1.000 EUR</button>
+                <button type="button" class="slot-option" data-slot-group="budgetRange" data-slot-value="1.000 bis 3.000 EUR">1.000 bis 3.000 EUR</button>
+                <button type="button" class="slot-option" data-slot-group="budgetRange" data-slot-value="3.000 bis 7.000 EUR">3.000 bis 7.000 EUR</button>
+                <button type="button" class="slot-option" data-slot-group="budgetRange" data-slot-value="7.000 EUR+">7.000 EUR+</button>
+              </div>
+            </section>
+
+            <section class="question-step" data-question-step>
+              <h2 class="question-title">Wann möchtest du starten?</h2>
+              <p class="question-subtitle">Optional. Falls noch unklar, einfach frei lassen.</p>
+              <div class="slot-grid" role="group" aria-label="Zeitrahmen Auswahl">
+                <button type="button" class="slot-option" data-slot-group="timeline" data-slot-value="ASAP">ASAP</button>
+                <button type="button" class="slot-option" data-slot-group="timeline" data-slot-value="2 bis 4 Wochen">2 bis 4 Wochen</button>
+                <button type="button" class="slot-option" data-slot-group="timeline" data-slot-value="1 bis 2 Monate">1 bis 2 Monate</button>
+                <button type="button" class="slot-option" data-slot-group="timeline" data-slot-value="flexibel">flexibel</button>
+              </div>
+            </section>
+
+            <section class="question-step" data-question-step>
+              <h2 class="question-title">Wie erreiche ich dich am besten?</h2>
+              <p class="question-subtitle">Hier sind nur E-Mail und Telefonnummer Pflicht.</p>
+
+              <div class="contact-grid">
+                <div class="contact-field">
+                  <label for="contactName">Name (optional)</label>
+                  <input id="contactName" name="contactName" type="text" maxlength="100" placeholder="Vor- und Nachname" />
+                </div>
+                <div class="contact-field">
+                  <label for="contactEmail">E-Mail (Pflicht)</label>
+                  <input id="contactEmail" name="contactEmail" type="email" maxlength="120" placeholder="name@firma.de" />
+                  <div class="field-warning" data-warning="email"></div>
+                </div>
+                <div class="contact-field">
+                  <label for="contactPhone">Telefonnummer (Pflicht)</label>
+                  <input id="contactPhone" name="contactPhone" type="text" maxlength="40" placeholder="+49 ..." />
+                  <div class="field-warning" data-warning="phone"></div>
+                </div>
+                <div class="contact-field full">
+                  <label>Bevorzugter Kontaktweg (optional)</label>
+                  <div class="slot-grid" role="group" aria-label="Kontaktweg Auswahl">
+                    <button type="button" class="slot-option" data-slot-group="preferredContact" data-slot-value="E-Mail">E-Mail</button>
+                    <button type="button" class="slot-option" data-slot-group="preferredContact" data-slot-value="Telefon">Telefon</button>
+                    <button type="button" class="slot-option" data-slot-group="preferredContact" data-slot-value="WhatsApp">WhatsApp</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hidden-honeypot" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" autocomplete="off" tabindex="-1" />
+              </div>
+            </section>
+
+            <div class="question-actions">
+              <div class="action-left">
+                <button type="button" class="btn btn-secondary" data-request-back>Zurück</button>
+              </div>
+              <div class="action-right">
+                <button type="button" class="btn btn-secondary" data-request-next>Weiter</button>
+                <button type="submit" class="btn btn-primary" data-request-submit style="display:none;">Projekt anfragen</button>
+              </div>
+            </div>
+
+            <p class="request-hint">Hinweis: Nach dem Absenden wirst du direkt zur Danke-Seite weitergeleitet.</p>
+            <div class="form-warning" data-form-warning></div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Arman Ebadi</strong>
+        <div>Websites, die wirken. Systeme, die Zeit sparen.</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer Links">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="login.html">Login</a>
+        <a href="mailto:info@example.com">info@example.com</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/site.js" defer></script>
+  <script src="assets/telemetry.js" defer></script>
+  <script src="assets/request.js" defer></script>
+</body>
+</html>
