@@ -1,0 +1,30 @@
+{
+  "name": "arman-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.54.1",
+    "class-variance-authority": "^1.3.1",
+    "framer-motion": "^11.4.1",
+    "next": "14.2.9",
+    "react": "18.3.0",
+    "react-dom": "18.3.0",
+    "react-hook-form": "^7.58.0",
+    "shadcn-ui": "^1.0.3",
+    "zod": "^3.23.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.5.0",
+    "eslint-config-next": "^14.2.9",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.3.1"
+  }
+}

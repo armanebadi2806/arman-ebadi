@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-white text-[#0f172a] font-sans;
+  min-height: 100vh;
+}
+
+a {
+  @apply text-[#0f172a];
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danke | Arman Ebadi</title>
+  <meta
+    name="description"
+    content="Danke für deine Anfrage. Rückmeldung innerhalb von 24 Stunden."
+  />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico?v=3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=3" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=3" />
+  <link rel="apple-touch-icon" href="assets/logo.png?v=3" />
+  <link rel="stylesheet" href="assets/site.css" />
+  <style>
+    .thanks-main {
+      min-height: calc(100vh - 180px);
+      display: grid;
+      place-items: center;
+      padding: 48px 0 72px;
+    }
+
+    .thanks-card {
+      width: min(820px, calc(100% - 2.5rem));
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(28px, 5vw, 52px);
+      text-align: center;
+    }
+
+    .thanks-card h1 {
+      margin: 14px 0 14px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .thanks-card p {
+      margin: 0 auto;
+      max-width: 62ch;
+      color: var(--text-soft);
+      font-size: 1.05rem;
+    }
+
+    .thanks-actions {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" data-site-header>
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Zur Startseite">
+        <span class="brand-logo" aria-hidden="true">
+          <img src="assets/logo.png" alt="" loading="eager" onerror="this.style.display='none'" />
+        </span>
+        <span>Arman Ebadi</span>
+      </a>
+      <nav class="top-nav" aria-label="Hauptnavigation">
+        <a href="index.html#leistungen">Leistungen</a>
+        <a href="index.html#ablauf">Ablauf</a>
+        <a href="anfrage.html">Anfrage</a>
+      </nav>
+      <a class="btn btn-secondary" href="index.html">Zur Startseite</a>
+    </div>
+  </header>
+
+  <main class="thanks-main">
+    <section class="thanks-card" data-reveal>
+      <p class="kicker">Anfrage erfolgreich</p>
+      <h1>Danke! Ich melde mich innerhalb von 24 Stunden.</h1>
+      <p>
+        Deine Anfrage ist eingegangen. Ich schaue auf Ziele, Umfang und Prioritäten und sende dir zeitnah eine klare
+        Rückmeldung mit nächsten Schritten.
+      </p>
+      <div class="thanks-actions">
+        <a class="btn btn-primary" href="index.html">Zur Startseite</a>
+        <a class="btn btn-secondary" href="anfrage.html">Weitere Anfrage stellen</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong>Arman Ebadi</strong>
+        <div>Websites, die wirken. Systeme, die Zeit sparen.</div>
+      </div>
+      <nav class="footer-links" aria-label="Footer Links">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="login.html">Login</a>
+        <a href="mailto:info@example.com">info@example.com</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/site.js" defer></script>
+  <script src="assets/telemetry.js" defer></script>
+</body>
+</html>
