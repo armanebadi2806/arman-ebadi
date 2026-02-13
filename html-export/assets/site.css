@@ -710,8 +710,24 @@ main {
     border-radius: 12px;
   }
 
+  .header-inner .btn {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+
   .landing-page .landing-wrap {
     width: calc(100% - 1.6rem);
+  }
+
+  .landing-page .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .landing-page .hero-side {
+    order: 2;
+    gap: 0.9rem;
   }
 
   .landing-page .section-shell {
@@ -719,21 +735,21 @@ main {
   }
 
   .landing-page .hero-premium {
-    padding: 1.6rem 0 0.8rem;
+    padding: 1.3rem 0 0.7rem;
   }
 
   .landing-page .hero-premium .hero-content {
     padding: 1rem 1.1rem;
-    border-radius: 18px;
+    border-radius: 16px;
   }
 
   .landing-page .hero-premium h1 {
-    font-size: 2.1rem;
-    line-height: 1.12;
+    font-size: 1.95rem;
+    line-height: 1.16;
   }
 
   .landing-page .hero-subline {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
   }
 
   .landing-page .hero-actions {
@@ -751,25 +767,109 @@ main {
 
   .landing-page .about-card {
     width: 100%;
+    padding: 0.7rem;
   }
 
   .landing-page .about-card-body {
-    grid-template-columns: 72px 1fr;
-    gap: 0.8rem;
+    grid-template-columns: 68px 1fr;
+    gap: 0.7rem;
   }
 
   .landing-page .about-card-photo {
-    width: 72px;
-    height: 72px;
+    width: 68px;
+    height: 68px;
   }
 
   .landing-page .hero-intel {
-    padding: 1rem;
-    border-radius: 20px;
+    padding: 0.9rem;
+    border-radius: 18px;
   }
 
   .landing-page .hero-insight-box {
     max-width: 100%;
+  }
+
+  .landing-page .hero-intel h3 {
+    font-size: 0.98rem;
+  }
+
+  .landing-page .hero-intel-line,
+  .landing-page .hero-intel-foot {
+    font-size: 0.8rem;
+  }
+
+  .landing-page .section-head {
+    gap: 0.55rem;
+  }
+
+  .landing-page .section-title {
+    font-size: 1.55rem;
+    line-height: 1.2;
+  }
+
+  .landing-page .kicker {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  .landing-page .section-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .landing-page .fit-card,
+  .landing-page .fit-card-muted {
+    padding: 1.1rem 1.1rem 1.05rem 1.35rem;
+  }
+
+  .landing-page .service-block {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+  }
+
+  .landing-page .service-block.is-reverse .service-copy {
+    order: 0;
+  }
+
+  .landing-page .service-copy h3 {
+    font-size: 1.25rem;
+  }
+
+  .landing-page .service-copy ul {
+    gap: 0.45rem;
+  }
+
+  .landing-page .visual-screen,
+  .landing-page .visual-editor,
+  .landing-page .visual-flow {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .landing-page .visual-grid span {
+    height: 40px;
+  }
+
+  .landing-page .visual-grid span:last-child {
+    height: 48px;
+  }
+
+  .landing-page .flow-step {
+    font-size: 0.78rem;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .landing-page .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-page .process-card {
+    min-height: unset;
+  }
+
+  .landing-page .faq-item summary {
+    font-size: 0.95rem;
   }
 
   .landing-page .mobile-sticky-cta {
