@@ -32,12 +32,16 @@ body {
 }
 
 p,
-li,
+li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 h1,
 h2,
 h3 {
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 body {
