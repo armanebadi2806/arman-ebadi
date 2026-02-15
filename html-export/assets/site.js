@@ -105,7 +105,7 @@
   function updateMobileStickyCta() {
     if (!mobileStickyCta) return;
     const mobile = window.matchMedia('(max-width: 768px)').matches;
-    const pastThreshold = window.scrollY > window.innerHeight * 0.28;
+    const pastThreshold = window.scrollY > 300;
     const drawerOpenState = drawer && drawer.classList.contains('is-open');
     if (mobile && pastThreshold && !drawerOpenState) {
       mobileStickyCta.classList.add('is-visible');

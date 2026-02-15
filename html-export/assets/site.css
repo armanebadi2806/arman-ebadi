@@ -26,6 +26,20 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
+p,
+li,
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 body {
   margin: 0;
   font-family: 'Manrope', 'Inter', system-ui, sans-serif;
@@ -2128,7 +2142,7 @@ main {
 @media (max-width: 768px) {
   html,
   body {
-    overflow-x: clip;
+    overflow-x: hidden;
   }
 
   body.landing-page {
@@ -2161,11 +2175,25 @@ main {
 
   .mobile-menu-btn {
     justify-self: start;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1px solid rgba(12, 19, 36, 0.16);
+    background: transparent;
+    box-shadow: none;
   }
 
   .mobile-cta {
     justify-self: end;
-    min-height: 36px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    font-size: 0;
   }
 
   .brand {
@@ -2190,8 +2218,16 @@ main {
   .landing-page .landing-wrap {
     width: 100%;
     max-width: 100%;
-    padding: 0 16px;
+    padding: 0 18px;
     margin: 0;
+  }
+
+  .landing-page .hero-layout > *,
+  .landing-page .service-block > *,
+  .landing-page .fit-grid > *,
+  .landing-page .process-grid > *,
+  .landing-page .section-head > * {
+    min-width: 0;
   }
 
   .landing-page .hero-layout {
@@ -2302,6 +2338,8 @@ main {
   .landing-page .section-shell {
     border-radius: 18px;
     padding: 1.25rem;
+    border: 0;
+    box-shadow: 0 10px 26px rgba(11, 30, 65, 0.08);
   }
 
   .landing-page .section-head {
@@ -2312,6 +2350,7 @@ main {
   .landing-page .section-title {
     font-size: clamp(24px, 6vw, 28px);
     line-height: 1.18;
+    padding-right: 2px;
   }
 
   .landing-page .section-subtitle,
@@ -2368,6 +2407,7 @@ main {
   .landing-page .service-bullets {
     gap: 0.62rem;
     line-height: 1.58;
+    padding-right: 2px;
   }
 
   .landing-page .service-visual {
@@ -2378,7 +2418,33 @@ main {
   .landing-page .visual-editor,
   .landing-page .visual-flow {
     width: 100%;
-    max-height: 240px;
+    max-height: none;
+  }
+
+  .landing-page .visual-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .landing-page .flow-step {
+    width: 100%;
+  }
+
+  .landing-page .flow-arrow {
+    width: 2px;
+    height: 18px;
+    margin: 0 auto;
+  }
+
+  .landing-page .flow-arrow::after {
+    right: -4px;
+    top: 15px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid rgba(36, 92, 166, 0.5);
+    border-bottom: 0;
   }
 
   .landing-page .process-grid {
@@ -2407,6 +2473,17 @@ main {
 
   .landing-page .site-footer {
     padding-bottom: calc(86px + env(safe-area-inset-bottom));
+  }
+
+  .landing-page .section-break {
+    padding: 1.55rem 1.45rem;
+    border-radius: 18px;
+  }
+
+  .landing-page .section-break p {
+    font-size: clamp(1.3rem, 5.5vw, 1.7rem);
+    line-height: 1.22;
+    max-width: 34rem;
   }
 }
 
