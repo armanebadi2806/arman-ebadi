@@ -40,6 +40,8 @@
   }
 
   .site-header {
+    position: relative !important;
+    top: auto !important;
     z-index: 100;
     backdrop-filter: blur(12px);
     background: rgba(255, 255, 255, 0.86);
@@ -205,11 +207,11 @@
   }
 
   .landing-page .about-card {
-    border: 1px solid var(--m-line);
-    border-radius: 14px;
-    background: #ffffff;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
     box-shadow: none;
-    padding: 0.75rem;
+    padding: 0;
   }
 
   .landing-page .about-card-body {
