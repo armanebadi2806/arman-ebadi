@@ -12,6 +12,7 @@
   const progressNode = document.querySelector('[data-scroll-progress]');
   const sectionLinks = Array.from(document.querySelectorAll('.top-nav a[href^="#"]'));
   const heroIntel = document.querySelector('.landing-page .hero-intel');
+  const mobileStickyCta = document.querySelector('.mobile-sticky-cta');
   const drawer = document.querySelector('[data-mobile-drawer]');
   const drawerOpen = document.querySelector('[data-mobile-menu-open]');
   const drawerCloseButtons = Array.from(document.querySelectorAll('[data-mobile-menu-close]'));
@@ -38,6 +39,7 @@
     if (focusable.length) {
       focusable[0].focus();
     }
+    updateMobileStickyCta();
   }
 
   function closeDrawer() {
@@ -48,6 +50,7 @@
     if (lastFocused && typeof lastFocused.focus === 'function') {
       lastFocused.focus();
     }
+    updateMobileStickyCta();
   }
 
   if (drawerOpen) {
@@ -99,6 +102,18 @@
     }
   });
 
+  function updateMobileStickyCta() {
+    if (!mobileStickyCta) return;
+    const mobile = window.matchMedia('(max-width: 768px)').matches;
+    const pastThreshold = window.scrollY > window.innerHeight * 0.28;
+    const drawerOpenState = drawer && drawer.classList.contains('is-open');
+    if (mobile && pastThreshold && !drawerOpenState) {
+      mobileStickyCta.classList.add('is-visible');
+    } else {
+      mobileStickyCta.classList.remove('is-visible');
+    }
+  }
+
   function onScroll() {
     if (!header) return;
     if (window.scrollY > 12) {
@@ -141,9 +156,12 @@
     () => {
       updateScrollProgress();
       updateActiveSection();
+      updateMobileStickyCta();
     },
     { passive: true }
   );
+  window.addEventListener('resize', updateMobileStickyCta, { passive: true });
+  updateMobileStickyCta();
 
   if (sectionLinks.length) {
     sectionLinks.forEach((link) => {
