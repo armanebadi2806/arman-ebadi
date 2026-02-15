@@ -109,7 +109,7 @@
   }
 
   main {
-    padding-top: 14px;
+    padding-top: 72px;
     padding-bottom: calc(84px + env(safe-area-inset-bottom));
   }
 
@@ -130,26 +130,20 @@
   }
 
   .landing-page .section {
-    padding-block: 88px;
+    padding-block: 64px;
+  }
+
+  .landing-page .section-soft {
+    background: rgba(255, 255, 255, 0.62);
+  }
+
+  .landing-page .section-clear {
+    background: transparent;
   }
 
   .landing-page .section-shell,
   .landing-page .section-soft,
-  .landing-page .section-clear {
-    border-radius: 18px !important;
-    padding: 20px 16px !important;
-    border: 1px solid rgba(12, 19, 36, 0.1) !important;
-    box-shadow: 0 10px 24px rgba(12, 19, 36, 0.05) !important;
-  }
-
-  .landing-page .section-soft {
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.97), rgba(245, 249, 255, 0.92)) !important;
-  }
-
-  .landing-page .section-clear {
-    background: linear-gradient(165deg, rgba(250, 252, 255, 0.72), rgba(244, 248, 253, 0.72)) !important;
-  }
-
+  .landing-page .section-clear,
   .landing-page .fit-card,
   .landing-page .fit-card-muted,
   .landing-page .insight-card,
@@ -163,7 +157,7 @@
   }
 
   .landing-page .section-head {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 10px;
@@ -199,7 +193,7 @@
     font-size: clamp(1.55rem, 7.1vw, 1.9rem);
     line-height: 1.12;
     letter-spacing: -0.02em;
-    max-width: 16ch;
+    max-width: 18ch;
     margin: 0;
   }
 

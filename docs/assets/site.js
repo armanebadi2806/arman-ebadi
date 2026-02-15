@@ -27,16 +27,6 @@
     })
     .filter(Boolean);
 
-  // Non-critical image hints for faster rendering without changing content.
-  document.querySelectorAll('img').forEach((img, index) => {
-    if (!img.hasAttribute('decoding')) {
-      img.setAttribute('decoding', 'async');
-    }
-    if (index > 0 && !img.hasAttribute('loading')) {
-      img.setAttribute('loading', 'lazy');
-    }
-  });
-
   function openDrawer() {
     if (!drawer) return;
     drawer.classList.add('is-open');
