@@ -22,6 +22,15 @@
   --shadow-md: 0 14px 40px rgba(12, 19, 36, 0.1);
 }
 
+/* Keep hero intro as clean surface (no card shell) */
+.landing-page .hero-premium .hero-content {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -71,8 +80,7 @@ main {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
   width: 100%;
   background: rgba(255, 255, 255, 0.84);
@@ -1114,6 +1122,15 @@ main {
   padding: clamp(2.6rem, 5vw, 4.2rem) 0 1.6rem;
 }
 
+.landing-page .hero > div {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  overflow: visible;
+}
+
 .landing-page .hero-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
@@ -1179,10 +1196,10 @@ main {
 
 .landing-page .hero-premium .hero-content {
   max-width: 720px;
-  border: 1px solid rgba(12, 19, 36, 0.08);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.85);
-  padding: clamp(1.1rem, 2vw, 1.6rem) clamp(1.6rem, 3vw, 2rem);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .landing-page .hero-premium h1 {
@@ -2254,8 +2271,8 @@ main {
   }
 
   .landing-page .hero-premium .hero-content {
-    border-radius: 18px;
-    padding: 1.15rem 1rem;
+    border-radius: 0;
+    padding: 0;
   }
 
   .landing-page .hero-premium h1 {
