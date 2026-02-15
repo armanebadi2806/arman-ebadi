@@ -3286,3 +3286,155 @@ body {
     line-height: 1.15;
   }
 }
+
+/* Production UI polish overrides */
+:root {
+  --max-width: 1100px;
+  --header-height: 86px;
+}
+
+body {
+  padding-top: var(--header-height);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(12, 19, 36, 0.08);
+  transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(12, 19, 36, 0.14);
+  box-shadow: 0 10px 24px rgba(12, 19, 36, 0.08);
+}
+
+.header-inner {
+  min-height: var(--header-height);
+  width: min(var(--max-width), calc(100% - 2.5rem));
+  transition: min-height 220ms ease;
+}
+
+.site-header.is-scrolled .header-inner {
+  min-height: 80px;
+}
+
+main {
+  padding-bottom: 88px;
+}
+
+.page-wrap,
+.hero,
+.section,
+.site-footer .footer-inner {
+  width: min(var(--max-width), calc(100% - 2.5rem));
+}
+
+.landing-page .section {
+  padding: clamp(5rem, 8vw, 7rem) 0;
+}
+
+.landing-page .section-soft {
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.landing-page .section-clear {
+  background: transparent;
+}
+
+.landing-page .section-title {
+  line-height: 1.1;
+}
+
+.landing-page .section-subtitle,
+.landing-page .hero-subline,
+.landing-page .fit-card ul,
+.landing-page .service-bullets,
+.landing-page .psy-copy p,
+.landing-page .faq-item p {
+  line-height: 1.7;
+}
+
+.landing-page .hero-premium {
+  padding-top: clamp(3rem, 5.5vw, 4.6rem);
+}
+
+.landing-page .hero-premium h1 {
+  max-width: 12ch;
+}
+
+.landing-page .hero-actions {
+  margin-top: 0.9rem;
+  gap: 14px;
+}
+
+.btn {
+  min-height: 50px;
+  padding: 0.85rem 1.6rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.landing-page .service-bullets li,
+.landing-page .fit-card li,
+.landing-page .fit-card-muted li {
+  margin-bottom: 0.35rem;
+}
+
+.landing-page .faq-item {
+  overflow: hidden;
+}
+
+.landing-page .faq-item p {
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 220ms ease, opacity 180ms ease, margin-top 180ms ease;
+}
+
+.landing-page .faq-item[open] p {
+  max-height: 260px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.landing-page .section[id] {
+  scroll-margin-top: 108px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  body {
+    padding-top: var(--header-height);
+  }
+
+  .header-inner {
+    width: calc(100% - 2.25rem);
+  }
+
+  .site-header.is-scrolled .header-inner {
+    min-height: 64px;
+  }
+
+  .landing-page .section {
+    padding: 64px 0;
+  }
+
+  .landing-page .hero-premium {
+    padding-top: 18px;
+  }
+
+  .landing-page .hero-actions .btn {
+    width: 100%;
+  }
+}
