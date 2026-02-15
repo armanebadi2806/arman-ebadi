@@ -3438,3 +3438,127 @@ main {
     width: 100%;
   }
 }
+
+/* Editorial structure override: no box-heavy layout */
+.landing-page .section {
+  padding: clamp(6.2rem, 9vw, 8.6rem) 0 !important;
+  border-top: 1px solid rgba(12, 19, 36, 0.1);
+}
+
+.landing-page .section:first-of-type {
+  border-top: 0;
+}
+
+.landing-page .section-shell {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.landing-page .section-soft {
+  background: rgba(255, 255, 255, 0.56) !important;
+}
+
+.landing-page .section-clear {
+  background: rgba(243, 247, 253, 0.45) !important;
+}
+
+.landing-page .section-head {
+  margin-bottom: 30px !important;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(12, 19, 36, 0.1);
+}
+
+.landing-page .section-title {
+  font-size: clamp(2.05rem, 3.45vw, 3.25rem) !important;
+  line-height: 1.08;
+}
+
+.landing-page .hero-premium h1 {
+  font-size: clamp(2.95rem, 5.1vw, 4.95rem) !important;
+  line-height: 1.03;
+}
+
+.landing-page .fit-card,
+.landing-page .fit-card-muted,
+.landing-page .psy-item,
+.landing-page .service-block,
+.landing-page .process-card,
+.landing-page .faq-item,
+.landing-page .premium-cta {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.landing-page .fit-grid,
+.landing-page .psychology-stack,
+.landing-page .service-blocks,
+.landing-page .process-grid,
+.landing-page .faq-list {
+  border-top: 1px solid rgba(12, 19, 36, 0.1);
+}
+
+.landing-page .fit-card,
+.landing-page .fit-card-muted,
+.landing-page .psy-item,
+.landing-page .service-block,
+.landing-page .process-card,
+.landing-page .faq-item {
+  padding: 22px 0 !important;
+  border-top: 1px solid rgba(12, 19, 36, 0.1) !important;
+}
+
+.landing-page .fit-card:first-child,
+.landing-page .psy-item:first-child,
+.landing-page .service-block:first-child,
+.landing-page .process-card:first-child,
+.landing-page .faq-item:first-child {
+  border-top: 0 !important;
+}
+
+.landing-page .service-blocks .service-visual {
+  border: 1px solid rgba(12, 19, 36, 0.12);
+  border-radius: 14px;
+  background: linear-gradient(160deg, #fbfdff 0%, #edf3fc 100%);
+}
+
+.landing-page .section-subtitle,
+.landing-page .hero-subline,
+.landing-page .fit-card ul,
+.landing-page .service-bullets,
+.landing-page .psy-copy p,
+.landing-page .faq-item p,
+.landing-page .premium-cta p {
+  line-height: 1.72 !important;
+}
+
+@media (max-width: 768px) {
+  .landing-page .section {
+    padding: 82px 0 !important;
+  }
+
+  .landing-page .section-head {
+    margin-bottom: 24px !important;
+    padding-bottom: 14px;
+  }
+
+  .landing-page .section-title {
+    font-size: clamp(1.62rem, 7.2vw, 2.02rem) !important;
+  }
+
+  .landing-page .hero-premium h1 {
+    font-size: clamp(1.94rem, 8.6vw, 2.36rem) !important;
+  }
+
+  .landing-page .fit-card,
+  .landing-page .fit-card-muted,
+  .landing-page .psy-item,
+  .landing-page .service-block,
+  .landing-page .process-card,
+  .landing-page .faq-item {
+    padding: 18px 0 !important;
+  }
+}

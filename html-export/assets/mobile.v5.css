@@ -606,3 +606,57 @@
     transition: none !important;
   }
 }
+
+/* Mobile editorial override: remove box feeling */
+@media (max-width: 768px) {
+  .landing-page .section-shell,
+  .landing-page .section-soft,
+  .landing-page .section-clear {
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .landing-page .section {
+    padding-block: 84px !important;
+    border-top: 1px solid rgba(12, 19, 36, 0.1);
+  }
+
+  .landing-page .section:first-of-type {
+    border-top: 0;
+  }
+
+  .landing-page .section-head {
+    margin-bottom: 22px !important;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(12, 19, 36, 0.1);
+  }
+
+  .landing-page .fit-grid,
+  .landing-page .psychology-stack,
+  .landing-page .service-blocks,
+  .landing-page .process-grid,
+  .landing-page .faq-list {
+    border-top: 1px solid rgba(12, 19, 36, 0.1);
+  }
+
+  .landing-page .fit-card,
+  .landing-page .fit-card-muted,
+  .landing-page .psy-item,
+  .landing-page .service-block,
+  .landing-page .process-card,
+  .landing-page .faq-item {
+    border-top: 1px solid rgba(12, 19, 36, 0.1) !important;
+    padding: 18px 0 !important;
+    background: transparent !important;
+  }
+
+  .landing-page .fit-card:first-child,
+  .landing-page .psy-item:first-child,
+  .landing-page .service-block:first-child,
+  .landing-page .process-card:first-child,
+  .landing-page .faq-item:first-child {
+    border-top: 0 !important;
+  }
+}
