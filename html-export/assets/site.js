@@ -12,6 +12,11 @@
   const progressNode = document.querySelector('[data-scroll-progress]');
   const sectionLinks = Array.from(document.querySelectorAll('.top-nav a[href^="#"]'));
   const heroIntel = document.querySelector('.landing-page .hero-intel');
+  const drawer = document.querySelector('[data-mobile-drawer]');
+  const drawerOpen = document.querySelector('[data-mobile-menu-open]');
+  const drawerCloseButtons = Array.from(document.querySelectorAll('[data-mobile-menu-close]'));
+  const drawerLinks = drawer ? Array.from(drawer.querySelectorAll('a[href]')) : [];
+  let lastFocused = null;
   const sectionTargets = sectionLinks
     .map((link) => {
       const id = link.getAttribute('href');
@@ -19,6 +24,80 @@
       return target ? { link, target } : null;
     })
     .filter(Boolean);
+
+  function openDrawer() {
+    if (!drawer) return;
+    drawer.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('no-scroll');
+    lastFocused = document.activeElement;
+    const panel = drawer.querySelector('.mobile-drawer-panel');
+    const focusable = panel
+      ? Array.from(panel.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])'))
+      : [];
+    if (focusable.length) {
+      focusable[0].focus();
+    }
+  }
+
+  function closeDrawer() {
+    if (!drawer) return;
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('no-scroll');
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+    }
+  }
+
+  if (drawerOpen) {
+    drawerOpen.addEventListener('click', openDrawer);
+  }
+
+  if (drawerCloseButtons.length) {
+    drawerCloseButtons.forEach((btn) => btn.addEventListener('click', closeDrawer));
+  }
+
+  if (drawerLinks.length) {
+    drawerLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const target = document.querySelector(targetId);
+          if (target) {
+            event.preventDefault();
+            closeDrawer();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
+          }
+        }
+        closeDrawer();
+      });
+    });
+  }
+
+  document.addEventListener('keydown', (event) => {
+    if (!drawer || !drawer.classList.contains('is-open')) return;
+    if (event.key === 'Escape') {
+      closeDrawer();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const panel = drawer.querySelector('.mobile-drawer-panel');
+    const focusable = panel
+      ? Array.from(panel.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])'))
+      : [];
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
 
   function onScroll() {
     if (!header) return;

@@ -17,6 +17,9 @@
 <body class="landing-page">
   <header class="site-header" data-site-header>
     <div class="header-inner">
+      <button class="mobile-menu-btn" type="button" aria-label="Menü öffnen" data-mobile-menu-open>
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
       <a class="brand" href="index.html" aria-label="Zur Startseite">
         <span class="brand-logo" aria-hidden="true">
           <img src="assets/logo.png" alt="" loading="eager" onerror="this.style.display='none'" />
@@ -32,8 +35,26 @@
         <a href="anfrage.html">Anfrage</a>
       </nav>
       <a class="btn btn-primary" href="anfrage.html">Projekt anfragen</a>
+      <a class="mobile-cta" href="anfrage.html" aria-label="Anfrage">Anfrage</a>
     </div>
   </header>
+  <div class="mobile-drawer" data-mobile-drawer aria-hidden="true">
+    <div class="mobile-drawer-overlay" data-mobile-menu-close></div>
+    <div class="mobile-drawer-panel" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+      <div class="mobile-drawer-header">
+        <span>Menü</span>
+        <button class="mobile-drawer-close" type="button" aria-label="Menü schließen" data-mobile-menu-close>×</button>
+      </div>
+      <nav class="mobile-drawer-nav" aria-label="Mobile Navigation">
+        <a href="#fuer-wen">Für wen</a>
+        <a href="#psychologie">Psychologie</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#prozess">Prozess</a>
+        <a href="#faq">FAQ</a>
+        <a href="anfrage.html">Anfrage</a>
+      </nav>
+    </div>
+  </div>
   <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
 
   <main>
@@ -274,12 +295,6 @@
                 Ob kompakter Onepager oder mehrseitige Website – Sie bekommen genau die Struktur, die zu Ihrem Angebot
                 passt. Individuell programmiert statt Baukasten oder Template.
               </p>
-              <ul>
-                <li>Onepager oder mehrseitig (skalierbar)</li>
-                <li>Mobile-optimiert und schnell</li>
-                <li>Klare Navigation & Struktur</li>
-                <li>Individuell entwickelt (kein Baukasten)</li>
-              </ul>
             </div>
             <div class="service-visual">
               <div class="visual-screen">
@@ -293,6 +308,12 @@
                 </div>
               </div>
             </div>
+            <ul class="service-bullets">
+              <li>Onepager oder mehrseitig (skalierbar)</li>
+              <li>Mobile-optimiert und schnell</li>
+              <li>Klare Navigation & Struktur</li>
+              <li>Individuell entwickelt (kein Baukasten)</li>
+            </ul>
           </article>
 
           <article class="service-block is-reverse">
@@ -303,12 +324,6 @@
                 Damit Ihre Website verstanden wird und professionell wirkt, übernehme ich Design und Inhalte abgestimmt
                 auf Ihre Zielgruppe.
               </p>
-              <ul>
-                <li>Texte (klar, überzeugend, passend zur Zielgruppe)</li>
-                <li>Grafiken/Icons im Stil der Website</li>
-                <li>Bildauswahl oder Bildkonzept</li>
-                <li>Visuelle Hierarchie & Vertrauenswirkung</li>
-              </ul>
             </div>
             <div class="service-visual">
               <div class="visual-editor">
@@ -325,6 +340,12 @@
                 </div>
               </div>
             </div>
+            <ul class="service-bullets">
+              <li>Texte (klar, überzeugend, passend zur Zielgruppe)</li>
+              <li>Grafiken/Icons im Stil der Website</li>
+              <li>Bildauswahl oder Bildkonzept</li>
+              <li>Visuelle Hierarchie & Vertrauenswirkung</li>
+            </ul>
           </article>
 
           <article class="service-block">
@@ -335,12 +356,6 @@
                 Wenn Ihre Website mehr können soll als nur informieren, integriere ich Prozesse wie Buchung, Anfragen
                 oder interne Abläufe.
               </p>
-              <ul>
-                <li>Buchungs- und Anfrageprozesse</li>
-                <li>Automatisierte E-Mail-Abläufe</li>
-                <li>Admin-/Backend-Funktionen (falls nötig)</li>
-                <li>Individuelle kleine Tools für wiederkehrende Aufgaben</li>
-              </ul>
             </div>
             <div class="service-visual">
               <div class="visual-flow">
@@ -351,6 +366,12 @@
                 <div class="flow-step">Termin</div>
               </div>
             </div>
+            <ul class="service-bullets">
+              <li>Buchungs- und Anfrageprozesse</li>
+              <li>Automatisierte E-Mail-Abläufe</li>
+              <li>Admin-/Backend-Funktionen (falls nötig)</li>
+              <li>Individuelle kleine Tools für wiederkehrende Aufgaben</li>
+            </ul>
           </article>
         </div>
       </section>
