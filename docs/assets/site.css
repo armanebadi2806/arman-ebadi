@@ -2218,7 +2218,7 @@ main {
   .landing-page .landing-wrap {
     width: 100%;
     max-width: 100%;
-    padding: 0 18px;
+    padding: 0 16px;
     margin: 0;
   }
 
@@ -2412,6 +2412,19 @@ main {
 
   .landing-page .service-visual {
     justify-items: stretch;
+    min-width: 0;
+  }
+
+  .landing-page .service-blocks,
+  .landing-page .service-block,
+  .landing-page .service-copy,
+  .landing-page .service-bullets,
+  .landing-page .service-visual,
+  .landing-page .section-head,
+  .landing-page .section-title,
+  .landing-page .section-subtitle {
+    min-width: 0;
+    max-width: 100%;
   }
 
   .landing-page .visual-screen,
@@ -2419,6 +2432,8 @@ main {
   .landing-page .visual-flow {
     width: 100%;
     max-height: none;
+    min-width: 0;
+    overflow: hidden;
   }
 
   .landing-page .visual-flow {
@@ -2439,7 +2454,9 @@ main {
   }
 
   .landing-page .flow-arrow::after {
-    right: -4px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
     top: 15px;
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
@@ -2460,10 +2477,14 @@ main {
     z-index: 150;
     height: 56px;
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0 1rem;
     opacity: 0;
     pointer-events: none;
     bottom: calc(10px + env(safe-area-inset-bottom));
-    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: 0;
   }
 
   .landing-page .mobile-sticky-cta.is-visible {
@@ -2476,14 +2497,37 @@ main {
   }
 
   .landing-page .section-break {
-    padding: 1.55rem 1.45rem;
-    border-radius: 18px;
+    padding: 24px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #0f1a30 0%, #1b3764 100%);
   }
 
   .landing-page .section-break p {
-    font-size: clamp(1.3rem, 5.5vw, 1.7rem);
-    line-height: 1.22;
+    font-size: clamp(24px, 6.2vw, 28px);
+    line-height: 1.2;
     max-width: 34rem;
+    letter-spacing: 0;
+  }
+
+  .site-footer .footer-inner {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.25rem 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .footer-brand {
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .footer-links {
+    justify-content: center;
   }
 }
 
