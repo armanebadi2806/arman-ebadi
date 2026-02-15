@@ -3438,3 +3438,138 @@ main {
     width: 100%;
   }
 }
+
+/* Chaptered layout and readability refinement */
+html {
+  scroll-behavior: smooth;
+}
+
+.landing-page .landing-wrap {
+  width: min(1100px, calc(100% - 2.5rem));
+}
+
+.landing-page .section {
+  padding: clamp(6.25rem, 10vw, 8.75rem) 0;
+  border-top: 1px solid rgba(12, 19, 36, 0.08);
+}
+
+.landing-page .section:first-of-type {
+  border-top: 0;
+}
+
+.landing-page .section-shell {
+  border-radius: 28px;
+  padding: clamp(1.6rem, 2.8vw, 2.4rem);
+  border: 1px solid rgba(12, 19, 36, 0.1);
+  box-shadow: 0 12px 30px rgba(12, 19, 36, 0.06);
+}
+
+.landing-page .section-soft {
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.97), rgba(246, 250, 255, 0.93));
+}
+
+.landing-page .section-clear {
+  background: linear-gradient(165deg, rgba(249, 252, 255, 0.72), rgba(243, 247, 253, 0.72));
+}
+
+.landing-page .section-head {
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.landing-page .section-title {
+  font-size: clamp(2.15rem, 3.7vw, 3.45rem);
+  line-height: 1.08;
+}
+
+.landing-page .hero-premium h1 {
+  font-size: clamp(3rem, 5.5vw, 5.2rem);
+  line-height: 1.02;
+}
+
+.landing-page .hero-subline,
+.landing-page .section-subtitle,
+.landing-page .fit-card ul,
+.landing-page .service-bullets,
+.landing-page .psy-copy p,
+.landing-page .faq-item p,
+.landing-page .premium-cta p {
+  max-width: 68ch;
+  line-height: 1.72;
+}
+
+.landing-page .fit-grid,
+.landing-page .process-grid {
+  gap: 20px;
+}
+
+.landing-page .fit-card,
+.landing-page .fit-card-muted,
+.landing-page .psy-item,
+.landing-page .service-block,
+.landing-page .process-card,
+.landing-page .faq-item,
+.landing-page .premium-cta {
+  border: 1px solid rgba(12, 19, 36, 0.1);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 24px rgba(12, 19, 36, 0.05);
+}
+
+.landing-page .psy-item,
+.landing-page .service-block {
+  padding: clamp(1.55rem, 2.8vw, 2.4rem);
+}
+
+.landing-page .process-card {
+  padding: 1.15rem 1.2rem;
+}
+
+.landing-page .faq-item {
+  padding: 1rem 1.2rem;
+}
+
+.landing-page .faq-item summary {
+  min-height: 52px;
+}
+
+.landing-page .hero-actions .btn,
+.landing-page .premium-cta .btn {
+  min-height: 52px;
+}
+
+@media (max-width: 768px) {
+  .landing-page .landing-wrap {
+    width: 100%;
+  }
+
+  .landing-page .section {
+    padding: 86px 0;
+  }
+
+  .landing-page .section-shell {
+    border-radius: 18px;
+    padding: 18px 16px;
+    box-shadow: 0 8px 20px rgba(12, 19, 36, 0.05);
+  }
+
+  .landing-page .section-title {
+    font-size: clamp(1.68rem, 7.2vw, 2.05rem);
+    line-height: 1.1;
+  }
+
+  .landing-page .hero-premium h1 {
+    font-size: clamp(2rem, 8.8vw, 2.45rem);
+  }
+
+  .landing-page .fit-card,
+  .landing-page .fit-card-muted,
+  .landing-page .psy-item,
+  .landing-page .service-block,
+  .landing-page .process-card,
+  .landing-page .faq-item,
+  .landing-page .premium-cta {
+    border-radius: 16px;
+    padding: 16px;
+  }
+}
