@@ -27,6 +27,13 @@
     })
     .filter(Boolean);
 
+  function scrollToSection(target) {
+    if (!target) return;
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const top = window.scrollY + target.getBoundingClientRect().top - headerHeight - 14;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  }
+
   function openDrawer() {
     if (!drawer) return;
     drawer.classList.add('is-open');
@@ -71,7 +78,7 @@
           if (target) {
             event.preventDefault();
             closeDrawer();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            scrollToSection(target);
             return;
           }
         }
@@ -176,7 +183,7 @@
         const target = document.querySelector(targetId);
         if (!target) return;
         event.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        scrollToSection(target);
       });
     });
   }
