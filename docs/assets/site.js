@@ -13,6 +13,7 @@
   const sectionLinks = Array.from(document.querySelectorAll('.top-nav a[href^="#"]'));
   const heroIntel = document.querySelector('.landing-page .hero-intel');
   const mobileStickyCta = document.querySelector('.mobile-sticky-cta');
+  const footerNode = document.querySelector('.site-footer');
   const drawer = document.querySelector('[data-mobile-drawer]');
   const drawerOpen = document.querySelector('[data-mobile-menu-open]');
   const drawerCloseButtons = Array.from(document.querySelectorAll('[data-mobile-menu-close]'));
@@ -107,7 +108,11 @@
     const mobile = window.matchMedia('(max-width: 768px)').matches;
     const pastThreshold = window.scrollY > 300;
     const drawerOpenState = drawer && drawer.classList.contains('is-open');
-    if (mobile && pastThreshold && !drawerOpenState) {
+    const nearFooter =
+      footerNode && footerNode.getBoundingClientRect
+        ? footerNode.getBoundingClientRect().top < window.innerHeight - 120
+        : false;
+    if (mobile && pastThreshold && !drawerOpenState && !nearFooter) {
       mobileStickyCta.classList.add('is-visible');
     } else {
       mobileStickyCta.classList.remove('is-visible');
