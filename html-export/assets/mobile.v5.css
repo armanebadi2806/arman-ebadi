@@ -21,7 +21,9 @@
   }
 
   body.landing-page {
-    background: #f5f7fc;
+    background:
+      radial-gradient(circle at 90% 0%, rgba(27, 64, 117, 0.08), transparent 28%),
+      #f5f7fc;
     color: var(--m-text);
     padding-bottom: calc(84px + env(safe-area-inset-bottom));
   }
@@ -121,7 +123,15 @@
   }
 
   .landing-page .section {
-    padding-block: var(--m-space-7);
+    padding-block: 64px;
+  }
+
+  .landing-page .section-soft {
+    background: rgba(255, 255, 255, 0.62);
+  }
+
+  .landing-page .section-clear {
+    background: transparent;
   }
 
   .landing-page .section-shell,
@@ -140,21 +150,49 @@
   }
 
   .landing-page .section-head {
-    margin-bottom: var(--m-space-4);
+    margin-bottom: 22px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
     border-left: 0;
     padding-left: 0;
   }
 
+  .landing-page .section-marker {
+    margin: 0;
+    min-width: 34px;
+    height: 24px;
+    border-radius: 999px;
+    border: 1px solid rgba(12, 19, 36, 0.16);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--m-text-soft);
+  }
+
   .landing-page .kicker {
+    align-self: center;
+    margin: 0;
     font-size: 0.72rem;
     letter-spacing: 0.14em;
   }
 
   .landing-page .section-title {
+    grid-column: 1 / -1;
     font-size: clamp(1.55rem, 7.1vw, 1.9rem);
-    line-height: 1.14;
+    line-height: 1.12;
     letter-spacing: -0.02em;
     max-width: 18ch;
+    margin: 0;
+  }
+
+  .landing-page .section-subtitle {
+    grid-column: 1 / -1;
+    margin: 0;
   }
 
   .landing-page .section-subtitle,
@@ -188,8 +226,12 @@
   }
 
   .landing-page .hero-premium h1 {
-    font-size: clamp(2rem, 9vw, 2.35rem);
-    line-height: 1.1;
+    font-size: clamp(1.88rem, 8.2vw, 2.24rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    word-break: keep-all;
+    hyphens: none;
+    text-wrap: balance;
   }
 
   .landing-page .hero-actions {
@@ -217,13 +259,13 @@
   }
 
   .landing-page .about-card-body {
-    grid-template-columns: 60px 1fr;
-    gap: 0.75rem;
+    grid-template-columns: 72px 1fr;
+    gap: 0.9rem;
   }
 
   .landing-page .about-card-photo {
-    width: 60px;
-    height: 60px;
+    width: 72px;
+    height: 72px;
   }
 
   .landing-page .hero-intel {
@@ -259,6 +301,7 @@
   .landing-page .fit-card-muted {
     border-top: 1px solid var(--m-line) !important;
     padding: 22px 0;
+    background: transparent !important;
   }
 
   .landing-page .fit-card:first-child {
@@ -294,6 +337,11 @@
     padding: 22px 0;
   }
 
+  .landing-page .psy-copy {
+    display: grid;
+    gap: 8px;
+  }
+
   .landing-page .psy-item:first-child {
     border-top: 0;
   }
@@ -326,8 +374,9 @@
     grid-template-columns: 1fr;
     grid-template-areas:
       "copy"
+      "visual"
       "bullets";
-    gap: 16px;
+    gap: 14px;
     border-top: 1px solid var(--m-line);
     padding: 28px 0;
   }
@@ -349,9 +398,41 @@
     pointer-events: none;
   }
 
-  .landing-page .service-index,
-  .landing-page .service-visual {
+  .landing-page .service-index {
     display: none !important;
+  }
+
+  .landing-page .service-copy {
+    grid-area: copy;
+    display: grid;
+    gap: 10px;
+  }
+
+  .landing-page .service-visual {
+    grid-area: visual;
+    display: block !important;
+    min-height: 190px;
+    border-radius: 14px;
+    border: 1px solid rgba(12, 19, 36, 0.12);
+    background: linear-gradient(160deg, #fcfdff 0%, #edf2fb 100%);
+    padding: 12px;
+  }
+
+  .landing-page .service-bullets {
+    grid-area: bullets;
+  }
+
+  .landing-page .visual-flow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .landing-page .visual-flow .flow-arrow {
+    width: 2px;
+    height: 16px;
+    margin: 0 auto;
+    background: rgba(12, 19, 36, 0.28);
   }
 
   .landing-page .service-copy h3 {
@@ -450,9 +531,10 @@
 
   .landing-page .section-break p {
     margin: 0;
-    max-width: 30ch;
-    font-size: clamp(30px, 7vw, 38px);
-    line-height: 1.15;
+    max-width: 24ch;
+    font-size: clamp(27px, 6.8vw, 34px);
+    line-height: 1.16;
+    letter-spacing: -0.02em;
   }
 
   .landing-page .mobile-sticky-cta {
