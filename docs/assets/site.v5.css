@@ -3649,6 +3649,31 @@ main {
   line-height: 1.7 !important;
 }
 
+/* Glowing kicker labels (desktop + mobile) */
+.landing-page .kicker {
+  color: #245ca6 !important;
+  text-shadow:
+    0 0 10px rgba(36, 92, 166, 0.2),
+    0 0 20px rgba(36, 92, 166, 0.1);
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+.landing-page .section-head .kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.landing-page .section-head .kicker::after {
+  content: '';
+  width: 34px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(36, 92, 166, 0.75), rgba(36, 92, 166, 0.12));
+  box-shadow: 0 0 10px rgba(36, 92, 166, 0.3);
+}
+
 @media (min-width: 769px) {
   .landing-page #psychologie.section-shell {
     width: min(1100px, calc(100% - 2.5rem));
