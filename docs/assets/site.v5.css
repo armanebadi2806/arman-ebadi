@@ -3591,6 +3591,7 @@ main {
   gap: 28px !important;
   align-items: stretch !important;
   border-top: 0 !important;
+  margin-top: 10px;
 }
 
 .landing-page #fuer-wen .fit-card,
@@ -3666,5 +3667,6 @@ main {
 
   .landing-page #psychologie .psychology-stack {
     border-top: 0 !important;
+    margin-top: 10px;
   }
 }
