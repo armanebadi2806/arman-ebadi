@@ -3647,3 +3647,24 @@ main {
   gap: 10px !important;
   line-height: 1.7 !important;
 }
+
+@media (min-width: 769px) {
+  .landing-page #psychologie.section-shell {
+    width: min(1100px, calc(100% - 2.5rem));
+    margin-inline: auto;
+    padding: clamp(1.5rem, 2.8vw, 2.1rem) !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(12, 19, 36, 0.1) !important;
+    background: linear-gradient(165deg, rgba(246, 250, 255, 0.9), rgba(241, 246, 253, 0.84)) !important;
+  }
+
+  .landing-page #psychologie .section-head {
+    margin-bottom: 24px !important;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(12, 19, 36, 0.1);
+  }
+
+  .landing-page #psychologie .psychology-stack {
+    border-top: 0 !important;
+  }
+}
