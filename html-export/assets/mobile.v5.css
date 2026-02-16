@@ -162,8 +162,8 @@
     grid-template-columns: auto 1fr;
     column-gap: 10px;
     row-gap: 10px;
-    border-left: 0;
-    padding-left: 0;
+    border-left: none !important;
+    padding-left: 16px;
   }
 
   .landing-page .section-marker {
