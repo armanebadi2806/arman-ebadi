@@ -172,8 +172,8 @@ main {
 }
 
 .brand-logo {
-  width: 190px;
-  height: 70px;
+  width: 157px;
+  height: 58px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -189,11 +189,11 @@ main {
 .brand-logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   position: relative;
   z-index: 1;
-  transform: scale(1.2);
+  transform: scale(1.36);
 }
 
 .brand-logo::before {
@@ -302,34 +302,18 @@ main {
 
 .mobile-drawer-nav {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .mobile-drawer-nav a {
-  min-height: 48px;
-  display: flex;
+  min-height: 44px;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
   font-weight: 600;
-  border-radius: 14px;
-  padding: 0 14px;
+  border-radius: 10px;
+  padding: 0 0.7rem;
   color: var(--text);
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.5));
-  border: 1px solid rgba(17, 33, 64, 0.15);
-  box-shadow: 0 12px 26px rgba(12, 19, 36, 0.08);
-  position: relative;
-}
-
-.mobile-drawer-nav a::after {
-  content: '↗';
-  font-size: 0.9rem;
-  opacity: 0.6;
-}
-
-.mobile-drawer-nav a:hover {
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 16px 30px rgba(12, 19, 36, 0.13);
+  background: rgba(17, 33, 64, 0.04);
 }
 
 .mobile-drawer-nav a:focus-visible {
@@ -3329,18 +3313,6 @@ body {
   margin: 0 auto;
   line-height: 1.3;
   text-align: center;
-}
-
-.landing-page .fit-card ul li::before,
-.landing-page .fit-card-muted ul li::before,
-.landing-page .service-bullets li::before,
-.landing-page .psy-copy li::before {
-  content: '✦';
-  display: inline-block;
-  margin-right: 7px;
-  color: rgba(36, 92, 166, 0.75);
-  font-size: 0.75rem;
-  transform: translateY(1px);
 }
 /* Production UI polish overrides */
 :root {

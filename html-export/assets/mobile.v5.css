@@ -99,10 +99,10 @@
     justify-self: center;
   }
 
-.brand-logo {
-  width: 131px;
-  height: 43px;
-}
+  .brand-logo {
+    width: 108px;
+    height: 36px;
+  }
 
   .mobile-drawer {
     z-index: 200;
@@ -748,18 +748,6 @@
     text-align: center;
     color: #f7f8ff;
   }
-}
-
-.landing-page .fit-card ul li::before,
-.landing-page .fit-card-muted ul li::before,
-.landing-page .service-bullets li::before,
-.landing-page .psy-copy li::before {
-  content: '✦';
-  margin-right: 8px;
-  color: rgba(36, 92, 166, 0.7);
-  font-size: 0.72rem;
-  display: inline-block;
-  transform: translateY(1px);
 }
 
 /* Final spacing + wider shells on mobile */
