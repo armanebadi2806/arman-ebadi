@@ -729,24 +729,26 @@
 
 @media (max-width: 768px) {
   .landing-page .section-break {
-    padding: 3.5rem 0;
-    margin: 2rem 0;
-    background: linear-gradient(145deg, rgba(12, 20, 44, 0.88), rgba(19, 27, 55, 0.82));
-    border-radius: 20px;
-    box-shadow: 0 18px 40px rgba(5, 7, 20, 0.55);
+    padding: 2rem 0;
+    margin: 1.2rem 0;
+    background: linear-gradient(145deg, rgba(14, 22, 45, 0.92), rgba(22, 34, 66, 0.86));
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(5, 7, 20, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .landing-page .section-break-inner {
-    padding: 2rem 1.25rem;
-    border-radius: 16px;
-    background: rgba(5, 9, 26, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.2rem 1rem;
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(6, 11, 30, 0.8), rgba(11, 19, 40, 0.72));
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .landing-page .section-break p {
-    font-size: clamp(1.65rem, 6vw, 2.3rem);
+    font-size: clamp(1.18rem, 5.2vw, 1.55rem);
     text-align: center;
-    color: #f7f8ff;
+    color: #f5f7ff;
+    line-height: 1.4;
   }
 }
 

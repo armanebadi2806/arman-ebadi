@@ -3306,29 +3306,32 @@ body {
 /* Fresh quote shell */
 .landing-page .section-break {
   width: 100%;
-  padding: 4.5rem 0;
-  margin: 2.5rem 0;
-  background: linear-gradient(145deg, rgba(12, 20, 44, 0.95), rgba(24, 33, 73, 0.8));
-  border-radius: 28px;
-  box-shadow: 0 28px 60px rgba(5, 8, 20, 0.65);
+  padding: 2.4rem 0;
+  margin: 1.4rem 0;
+  background: linear-gradient(145deg, rgba(17, 27, 52, 0.96), rgba(24, 43, 86, 0.88));
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(7, 12, 28, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .landing-page .section-break-inner {
-  width: min(1080px, calc(100% - 2.5rem));
+  width: min(920px, calc(100% - 2.5rem));
   margin: 0 auto;
-  background: rgba(10, 17, 40, 0.85);
-  border-radius: 20px;
-  padding: clamp(2.25rem, 4vw, 3rem);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(145deg, rgba(9, 16, 35, 0.78), rgba(15, 24, 48, 0.72));
+  border-radius: 14px;
+  padding: clamp(1.3rem, 2.6vw, 1.8rem) clamp(1.1rem, 2.2vw, 1.8rem);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .landing-page .section-break p {
-  color: #f4f6ff;
-  font-size: clamp(2rem, 4vw, 3.3rem);
-  max-width: 42ch;
+  color: #f5f7ff;
+  font-size: clamp(1.35rem, 2.25vw, 2rem);
+  max-width: 34ch;
   margin: 0 auto;
-  line-height: 1.3;
+  line-height: 1.38;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .landing-page .fit-card ul li::before,
