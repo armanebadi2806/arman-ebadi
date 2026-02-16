@@ -3562,3 +3562,9 @@ main {
     padding: 18px 0 !important;
   }
 }
+
+/* Remove vertical accent line in "Geeignet/Nicht geeignet" cards */
+.landing-page .fit-card::before,
+.landing-page .fit-card-muted::before {
+  display: none !important;
+}
