@@ -3715,3 +3715,15 @@ main {
     background: linear-gradient(165deg, rgba(250, 252, 255, 0.88), rgba(244, 248, 253, 0.8)) !important;
   }
 }
+
+/* Final spacing polish: add gap between section shells (desktop) */
+@media (min-width: 769px) {
+  .landing-page .section.section-shell {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .landing-page .section.section-shell:first-of-type {
+    margin-top: 0;
+  }
+}
