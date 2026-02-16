@@ -4020,3 +4020,65 @@ main {
     padding: 0.8rem;
   }
 }
+
+/* FAQ polish */
+.landing-page .faq-list {
+  gap: 14px;
+}
+
+.landing-page .faq-item {
+  border-radius: 18px;
+  border: 1px solid rgba(14, 26, 48, 0.12);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.96), rgba(246, 250, 255, 0.9));
+  box-shadow: 0 12px 26px rgba(11, 30, 65, 0.07);
+  padding: 1.05rem 1.15rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.landing-page .faq-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(28, 103, 217, 0.24);
+  box-shadow: 0 16px 34px rgba(11, 30, 65, 0.1);
+}
+
+.landing-page .faq-item summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.landing-page .faq-item summary::after {
+  content: '+';
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(14, 26, 48, 0.2);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1f3d74;
+  background: rgba(28, 103, 217, 0.08);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.landing-page .faq-item[open] summary::after {
+  content: '−';
+  transform: rotate(180deg);
+  color: #fff;
+  background: linear-gradient(140deg, #184080, #245ca6);
+}
+
+.landing-page .faq-item p {
+  margin-top: 0.72rem;
+  padding-top: 0.72rem;
+  border-top: 1px solid rgba(14, 26, 48, 0.1);
+  line-height: 1.62;
+}
