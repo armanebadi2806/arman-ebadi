@@ -83,6 +83,7 @@
             <input type="hidden" name="timeline" />
             <input type="hidden" name="preferredContact" />
             <input type="hidden" name="features" />
+            <input type="hidden" name="featureNeed" />
 
             <section class="question-step active" data-question-step>
               <h2 class="question-title">Welche Art von Projekt planst du?</h2>
@@ -109,14 +110,21 @@
             </section>
 
             <section class="question-step" data-question-step>
-              <h2 class="question-title">Welche Features wünschst du dir?</h2>
-              <p class="question-subtitle">Freie Auswahl: tippen und hinzufügen. Du bist nicht auf feste Listen begrenzt.</p>
-              <div class="feature-builder">
+              <h2 class="question-title">Wünschst du dir ein Feature?</h2>
+              <p class="question-subtitle">Beispiele: Terminbuchung, Kundenportal.</p>
+              <div class="slot-grid" role="group" aria-label="Feature Bedarf Auswahl">
+                <button type="button" class="slot-option" data-slot-group="featureNeed" data-slot-value="Ja">Ja</button>
+                <button type="button" class="slot-option" data-slot-group="featureNeed" data-slot-value="Nein">Nein</button>
+              </div>
+              <div class="feature-builder feature-detail" data-feature-detail>
+                <h3 class="question-title feature-detail-title">Welche Features wünschst du dir?</h3>
+                <p class="question-subtitle">Freie Auswahl: tippen und hinzufügen. Du bist nicht auf feste Listen begrenzt.</p>
                 <div class="slot-grid" role="group" aria-label="Feature Vorschläge">
                   <button type="button" class="slot-option" data-feature-suggestion="Terminbuchung">Terminbuchung</button>
                   <button type="button" class="slot-option" data-feature-suggestion="Kundenportal">Kundenportal</button>
                   <button type="button" class="slot-option" data-feature-suggestion="Automatische E-Mails">Automatische E-Mails</button>
                   <button type="button" class="slot-option" data-feature-suggestion="CRM-Anbindung">CRM-Anbindung</button>
+                  <button type="button" class="slot-option" data-feature-suggestion="Ich weiß noch nicht">Ich weiß noch nicht</button>
                 </div>
                 <div class="feature-input-row">
                   <input type="text" data-feature-input placeholder="Eigenes Feature eingeben" maxlength="60" />

@@ -197,6 +197,19 @@
   gap: 12px;
 }
 
+.feature-detail {
+  display: none;
+}
+
+.feature-detail.is-visible {
+  display: grid;
+}
+
+.feature-detail-title {
+  margin-top: 6px;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
 .feature-input-row {
   display: flex;
   gap: 8px;

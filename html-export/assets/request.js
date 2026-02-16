@@ -17,6 +17,7 @@
   const state = {
     projectType: '',
     primaryGoal: '',
+    featureNeed: '',
     budgetRange: '',
     timeline: '',
     preferredContact: '',
@@ -33,6 +34,7 @@
     featureAddBtn: form.querySelector('[data-feature-add]'),
     featureTags: form.querySelector('[data-feature-tags]'),
     featureNotes: form.querySelector('[name="featureNotes"]'),
+    featureDetail: form.querySelector('[data-feature-detail]'),
     contactName: form.querySelector('[name="contactName"]'),
     contactEmail: form.querySelector('[name="contactEmail"]'),
     contactPhone: form.querySelector('[name="contactPhone"]'),
@@ -78,10 +80,25 @@
   function syncHiddenFields() {
     form.querySelector('[name="projectType"]').value = state.projectType;
     form.querySelector('[name="primaryGoal"]').value = state.primaryGoal;
+    form.querySelector('[name="featureNeed"]').value = state.featureNeed;
     form.querySelector('[name="budgetRange"]').value = state.budgetRange;
     form.querySelector('[name="timeline"]').value = state.timeline;
     form.querySelector('[name="preferredContact"]').value = state.preferredContact;
     form.querySelector('[name="features"]').value = JSON.stringify(state.features);
+  }
+
+  function renderFeatureDetail() {
+    if (!refs.featureDetail) return;
+    const show = state.featureNeed === 'Ja';
+    refs.featureDetail.classList.toggle('is-visible', show);
+
+    if (!show) {
+      state.features = [];
+      state.featureNotes = '';
+      refs.featureNotes.value = '';
+      renderFeatureTags();
+      renderFeatureSuggestions();
+    }
   }
 
   function renderSlotSelection() {
@@ -155,6 +172,7 @@
       const parsed = JSON.parse(raw);
       state.projectType = sanitizeText(parsed.projectType, 60);
       state.primaryGoal = sanitizeText(parsed.primaryGoal, 60);
+      state.featureNeed = sanitizeText(parsed.featureNeed, 12);
       state.budgetRange = sanitizeText(parsed.budgetRange, 60);
       state.timeline = sanitizeText(parsed.timeline, 60);
       state.preferredContact = sanitizeText(parsed.preferredContact, 60);
@@ -241,11 +259,12 @@
   }
 
   function collectPayload() {
+    const shouldIncludeFeatures = state.featureNeed === 'Ja';
     const payload = {
       projectType: state.projectType || null,
       primaryGoal: state.primaryGoal || null,
-      features: state.features,
-      featureNotes: sanitizeText(refs.featureNotes.value, 1000),
+      features: shouldIncludeFeatures ? state.features : [],
+      featureNotes: shouldIncludeFeatures ? sanitizeText(refs.featureNotes.value, 1000) : '',
       budgetRange: state.budgetRange || null,
       timeline: state.timeline || null,
       contactName: sanitizeText(refs.contactName.value, 100) || null,
@@ -317,6 +336,9 @@
 
       state[group] = state[group] === value ? '' : value;
       renderSlotSelection();
+      if (group === 'featureNeed') {
+        renderFeatureDetail();
+      }
       saveState();
       setGlobalWarning('');
       return;
@@ -442,6 +464,7 @@
 
   restoreState();
   renderSlotSelection();
+  renderFeatureDetail();
   renderFeatureTags();
   renderFeatureSuggestions();
   saveState();
