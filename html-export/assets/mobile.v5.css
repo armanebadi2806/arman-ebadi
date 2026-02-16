@@ -808,6 +808,37 @@
   }
 }
 
+/* Final mobile FAQ icon override: show + / - (not chevron) */
+@media (max-width: 768px) {
+  .landing-page .faq-item summary::after {
+    content: '+' !important;
+    width: 24px !important;
+    height: 24px !important;
+    border: 1px solid rgba(14, 26, 48, 0.2) !important;
+    border-right: 1px solid rgba(14, 26, 48, 0.2) !important;
+    border-bottom: 1px solid rgba(14, 26, 48, 0.2) !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+    line-height: 1 !important;
+    color: #1f3d74 !important;
+    background: rgba(28, 103, 217, 0.08) !important;
+    transform: none !important;
+    margin-left: 8px !important;
+    flex: 0 0 24px !important;
+  }
+
+  .landing-page .faq-item[open] summary::after {
+    content: '−' !important;
+    transform: none !important;
+    color: #fff !important;
+    background: linear-gradient(140deg, #184080, #245ca6) !important;
+    border-color: transparent !important;
+  }
+}
+
 /* Mobile menu + FAQ polish */
 @media (max-width: 768px) {
   .mobile-menu-btn {
