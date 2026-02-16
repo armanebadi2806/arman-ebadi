@@ -27,6 +27,17 @@
     })
     .filter(Boolean);
 
+  const dynamicTargets = Array.from(
+    document.querySelectorAll(
+      '.fit-card, .fit-card-muted, .psy-item, .service-block, .process-card, .faq-item, .premium-cta'
+    )
+  );
+
+  dynamicTargets.forEach((node, index) => {
+    node.classList.add('dynamic-item');
+    node.style.setProperty('--dyn-delay', `${Math.min(index * 45, 280)}ms`);
+  });
+
   function scrollToSection(target) {
     if (!target) return;
     const headerHeight = header ? header.getBoundingClientRect().height : 0;
@@ -205,8 +216,25 @@
       item.classList.add('fade-item');
       observer.observe(item);
     });
+
+    if (dynamicTargets.length) {
+      const dynamicObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-in');
+              dynamicObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2, rootMargin: '0px 0px -8% 0px' }
+      );
+
+      dynamicTargets.forEach((node) => dynamicObserver.observe(node));
+    }
   } else {
     revealItems.forEach((item) => item.classList.add('is-visible'));
+    dynamicTargets.forEach((node) => node.classList.add('is-in'));
   }
 
   function animateRange(duration, onFrame) {
@@ -338,6 +366,23 @@
     heroIntel.addEventListener('mouseleave', () => {
       heroIntel.classList.remove('is-interactive');
       heroIntel.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)';
+    });
+  }
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    const tiltCards = document.querySelectorAll('.fit-card, .fit-card-muted, .service-block, .premium-cta');
+    tiltCards.forEach((card) => {
+      card.addEventListener('mousemove', (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        card.style.setProperty('--tilt-x', `${(y * -3).toFixed(2)}deg`);
+        card.style.setProperty('--tilt-y', `${(x * 3).toFixed(2)}deg`);
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--tilt-x', '0deg');
+        card.style.setProperty('--tilt-y', '0deg');
+      });
     });
   }
 })();
