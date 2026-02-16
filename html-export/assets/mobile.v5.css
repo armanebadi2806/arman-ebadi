@@ -796,3 +796,14 @@
     height: 2px !important;
   }
 }
+
+@media (max-width: 768px) {
+  .landing-page #fuer-wen .fit-card ul li::before,
+  .landing-page #fuer-wen .fit-card-muted ul li::before {
+    font-size: 0.68rem;
+  }
+
+  .landing-page .service-bullets li::before {
+    font-size: 0.8rem;
+  }
+}
