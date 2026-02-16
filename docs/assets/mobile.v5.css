@@ -706,3 +706,23 @@
     padding-left: 1.05rem !important;
   }
 }
+
+/* Unified framed shell for all major sections (mobile) */
+@media (max-width: 768px) {
+  .landing-page .section.section-shell {
+    width: min(1100px, calc(100% - (var(--m-pad) * 2))) !important;
+    margin-inline: auto;
+    padding: 16px !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(12, 19, 36, 0.1) !important;
+    box-shadow: 0 8px 18px rgba(12, 19, 36, 0.06) !important;
+  }
+
+  .landing-page .section.section-shell.section-soft {
+    background: linear-gradient(165deg, rgba(246, 250, 255, 0.92), rgba(241, 246, 253, 0.86)) !important;
+  }
+
+  .landing-page .section.section-shell.section-clear {
+    background: linear-gradient(165deg, rgba(250, 252, 255, 0.9), rgba(244, 248, 253, 0.82)) !important;
+  }
+}
