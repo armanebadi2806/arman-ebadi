@@ -3566,5 +3566,11 @@ main {
 /* Remove vertical accent line in "Geeignet/Nicht geeignet" cards */
 .landing-page .fit-card::before,
 .landing-page .fit-card-muted::before {
+  content: none !important;
   display: none !important;
+}
+
+.landing-page .fit-card,
+.landing-page .fit-card-muted {
+  border-left: 0 !important;
 }
