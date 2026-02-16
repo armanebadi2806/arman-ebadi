@@ -3754,3 +3754,56 @@ main {
     margin-top: 0;
   }
 }
+
+/* Quote redesign: no box, clean editorial statement */
+.landing-page .section-break {
+  width: 100% !important;
+  margin: 1.2rem 0 0.8rem !important;
+  padding: 2.4rem 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.landing-page .section-break-inner {
+  width: min(860px, calc(100% - 2.5rem)) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.landing-page .section-break p {
+  margin: 0 auto !important;
+  max-width: 30ch !important;
+  color: #13203a !important;
+  font-size: clamp(1.65rem, 2.7vw, 2.25rem) !important;
+  line-height: 1.28 !important;
+  letter-spacing: -0.015em !important;
+  text-align: center !important;
+  position: relative;
+  padding: 0.95rem 0 1.05rem;
+}
+
+.landing-page .section-break p::before,
+.landing-page .section-break p::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(96px, 12vw, 150px);
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(36, 92, 166, 0.12), rgba(36, 92, 166, 0.55), rgba(36, 92, 166, 0.12));
+}
+
+.landing-page .section-break p::before {
+  top: 0;
+}
+
+.landing-page .section-break p::after {
+  bottom: 0;
+}
