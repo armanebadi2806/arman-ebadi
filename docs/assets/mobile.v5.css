@@ -979,7 +979,8 @@
   }
 
   .landing-page #psychologie.section-shell,
-  .landing-page #leistungen.section-shell {
+  .landing-page #leistungen.section-shell,
+  .landing-page .client-section.section-shell {
     padding: 1.1rem !important;
   }
 
@@ -1009,5 +1010,25 @@
   .landing-page .visual-flow {
     min-height: 210px !important;
     border-radius: 18px !important;
+  }
+
+  .landing-page .client-showcase {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  .landing-page .client-screenshot {
+    min-height: 270px !important;
+    border-radius: 18px !important;
+  }
+
+  .landing-page .client-placeholder {
+    min-height: 224px !important;
+    padding: 1.3rem !important;
+  }
+
+  .landing-page .client-card blockquote {
+    border-radius: 16px !important;
+    padding: 1rem !important;
   }
 }
