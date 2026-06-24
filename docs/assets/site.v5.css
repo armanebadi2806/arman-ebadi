@@ -4151,6 +4151,14 @@ main {
   font-size: 0.95rem;
 }
 
+.landing-page .client-screenshot img {
+  width: 100%;
+  height: 294px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
 .landing-page .client-card blockquote {
   margin: 0;
   border-radius: 20px;
@@ -4550,6 +4558,10 @@ main {
 
   .landing-page .client-placeholder {
     min-height: 224px;
+  }
+
+  .landing-page .client-screenshot img {
+    height: 224px;
   }
 }
 
