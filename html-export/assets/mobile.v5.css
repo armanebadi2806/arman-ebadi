@@ -1017,9 +1017,22 @@
     gap: 18px !important;
   }
 
-  .landing-page .client-screenshot {
-    min-height: 270px !important;
+  .landing-page .client-card {
+    padding: 0.75rem !important;
     border-radius: 18px !important;
+  }
+
+  .landing-page .client-screenshot {
+    aspect-ratio: 2940 / 1662 !important;
+    min-height: 0 !important;
+    border-radius: 16px !important;
+  }
+
+  .landing-page .client-screenshot img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
   }
 
   .landing-page .client-placeholder {
