@@ -4552,3 +4552,91 @@ main {
     min-height: 224px;
   }
 }
+
+/* Header repair after adding Kunden link */
+.site-header .header-inner {
+  width: min(1240px, calc(100% - 2rem));
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  column-gap: 1rem;
+}
+
+.site-header .brand {
+  min-width: 148px;
+  justify-self: start;
+}
+
+.site-header .brand-logo {
+  width: 148px;
+  height: 58px;
+  overflow: visible;
+}
+
+.site-header .brand-logo img {
+  object-fit: contain;
+  transform: none;
+}
+
+.site-header .top-nav {
+  justify-self: center;
+  min-width: 0;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+
+.site-header .top-nav a {
+  padding: 0.34rem 0.48rem;
+  white-space: nowrap;
+}
+
+.site-header .header-inner > .btn.btn-primary {
+  justify-self: end;
+  min-height: 44px;
+  padding: 0.7rem 1rem;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+  .site-header .header-inner > .btn.btn-primary {
+    display: none;
+  }
+
+  .site-header .header-inner {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .site-header .top-nav {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header .header-inner {
+    grid-template-columns: 44px 1fr 44px;
+  }
+
+  .site-header .brand {
+    min-width: 0;
+    justify-self: center;
+  }
+
+  .site-header .brand-logo {
+    width: 122px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header .header-inner {
+    width: calc(100% - 2rem) !important;
+    grid-template-columns: 44px 1fr 44px !important;
+    min-height: 64px !important;
+  }
+
+  .site-header .brand-logo {
+    width: 116px !important;
+    height: 42px !important;
+  }
+}
